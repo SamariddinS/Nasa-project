@@ -1,0 +1,43 @@
+{
+  "name": "nasa-api-backend",
+  "version": "1.0.0",
+  "description": "Backend side of Nasa project",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "jest --detectOpenHandles",
+    "test-watch": "jest --watch",
+    "start": "node src/server.js",
+    "watch": "nodemon src/server.js",
+    "cluster": "pm2 start src/server.js --name nasa-api-backend -i max",
+    "stop": "pm2 stop nasa-api-backend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SamariddinS/"
+  },
+  "keywords": [
+    "Nasa",
+    "backend",
+    "api",
+    "rest-api",
+    "client-server"
+  ],
+  "author": "Samariddin Sayfiddinov",
+  "license": "ISC",
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "csv-parse": "^4.15.4",
+    "express": "^4.18.2",
+    "mongoose": "^6.7.5",
+    "morgan": "^1.10.0",
+    "pm2": "^5.2.2"
+  },
+  "devDependencies": {
+    "jest": "^29.3.1",
+    "nodemon": "^2.0.20",
+    "supertest": "^6.3.1"
+  }
+}

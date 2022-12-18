@@ -1,0 +1,31 @@
+{
+  "name": "nasa-backend",
+  "version": "1.0.0",
+  "description": "Backend side of Nasa project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install-server": "npm install --prefix frontend",
+    "install-client": "npm install --prefix backend",
+    "install": "npm run install-client && npm run install-server",
+    "client": "npm run start --prefix frontend",
+    "server": "npm run watch --prefix backend",
+    "start": "npm run client && npm run server",
+    "deploy": "npm run build --prefix frontend && npm run start --prefix backend",
+    "deploy-cluster": "npm run build --prefix frontend && npm run cluster --prefix backend",
+    "stop-cluster": "npm run stop --prefix backend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SamariddinS/"
+  },
+  "keywords": [
+    "Nasa",
+    "backend",
+    "api",
+    "rest-api",
+    "client-server"
+  ],
+  "author": "Samariddin Sayfiddinov",
+  "license": "ISC"
+}
